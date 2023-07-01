@@ -5,3 +5,7 @@
 [submodule "MachineLearning/new_test"]
 	path = MachineLearning/new_test
 	url = https://github.com/DoanNgocCuongBKEGNH/new_test
+[submodule "MachineLearning/ML20222.PredictionBitcoin"]
+	path = MachineLearning/ML20222.PredictionBitcoin
+	url = https://github.com/lavibula/ML20222.PredictionBitcoin
+	branch = main
