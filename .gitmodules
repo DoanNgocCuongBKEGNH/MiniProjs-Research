@@ -2,3 +2,6 @@
 	path = new_test
 	url = https://github.com/DoanNgocCuongBKEGNH/new_test
 	branch = main
+[submodule "MachineLearning/new_test"]
+	path = MachineLearning/new_test
+	url = https://github.com/DoanNgocCuongBKEGNH/new_test
