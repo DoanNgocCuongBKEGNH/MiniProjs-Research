@@ -1,0 +1,35 @@
+`git clone https://github.com/lavibula/BitcoinPrediction.git` chỉ tạo một bản sao (clone) của repo gốc và bạn có thể làm việc trên bản sao này. Nhưng các thay đổi mà bạn thực hiện trong bản sao này sẽ không ảnh hưởng đến repo gốc và lịch sử commit của repo gốc cũng không được theo dõi trong bản sao này.
+
+Tiếp tục chỉnh sửa và giữ nguyên lịch sử commit: 
+git submodule add -b main https://github.com/lavibula/BitcoinPrediction.git
+
+
+git mirrow để như 1 bản back up
+
+So sánh git submodule, git subtree, git subrepo
+
+Nếu bạn chỉ cần theo dõi một repository con trong repository chính, git submodule có thể là một lựa chọn tốt.
+ Nếu bạn muốn tích hợp repository con vào repository chính và làm việc với chúng như một phần của dự án chung, git subtree hoặc git subrepo có thể phù hợp hơn.
+
+`git subtree` và `git submodule` là hai công cụ trong Git được sử dụng để làm việc với các repository con.
+
+1. **Git Subtree**
+   - `git subtree` cho phép bạn thêm một repository con vào một thư mục con của repository chính.
+   - Các thay đổi trong `subtree` có thể được commit và push trực tiếp từ repository chính.
+   - Khi clone repository chính, tất cả các `subtree` cũng được clone kèm theo.
+   - Quản lý `subtree` trong repository chính đơn giản hơn so với `git submodule`.
+
+2. **Git Submodule**
+   - `git submodule` cho phép bạn thêm một repository con vào repository chính như một commit cụ thể.
+   - Các thay đổi trong `submodule` phải được commit và push riêng từ repository con.
+   - Khi clone repository chính, chỉ có thông tin tham chiếu `submodule` được lấy và bạn cần thực hiện lệnh `git submodule init` và `git submodule update` để đồng bộ nội dung.
+   - Quản lý `submodule` trong repository chính phức tạp hơn so với `git subtree`.
+
+Dưới đây là một số điểm khác biệt giữa `git subtree` và `git submodule`:
+
+- `git subtree` thường được sử dụng khi muốn kết hợp các repository thành một repository duy nhất, trong khi `git submodule` thường được sử dụng khi muốn có một repository con độc lập.
+- `git subtree` giữ lịch sử commit của repository con trong lịch sử commit chính, trong khi `git submodule` không làm điều này.
+- Các thay đổi trong `subtree` có thể được theo dõi và merge như bất kỳ commit nào khác, trong khi `submodule` yêu cầu bạn điều hướng vào thư mục `submodule` để làm việc với nó.
+- `git subtree` hỗ trợ tái sử dụng các commit từ repository con, trong khi `git submodule` yêu cầu bạn làm việc với repository con độc lập.
+
+Trong cuối cùng, sự lựa chọn giữa `git subtree` và `git submodule` phụ thuộc vào yêu cầu cụ thể của dự án của bạn.

@@ -10,3 +10,7 @@ So sánh git submodule, git subtree, git subrepo
 
 Nếu bạn chỉ cần theo dõi một repository con trong repository chính, git submodule có thể là một lựa chọn tốt.
  Nếu bạn muốn tích hợp repository con vào repository chính và làm việc với chúng như một phần của dự án chung, git subtree hoặc git subrepo có thể phù hợp hơn.
+
+git remote add -f Test https://github.com/DoanNgocCuongBKEGNH/new_test
+
+git subtree add --prefix=\MiniProj_DataScience_CareerPath Test main
