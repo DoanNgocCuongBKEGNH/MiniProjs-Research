@@ -2,3 +2,9 @@
 	path = MachineLearning/ML20222.PredictionBitcoin
 	url = https://github.com/lavibula/ML20222.PredictionBitcoin
 	branch = main
+[submodule "OOP/OOP_Project_OAnQuan"]
+	path = OOP/OOP_Project_OAnQuan
+	url = https://github.com/relatable52/OOP_Project_OAnQuan
+[submodule "OOP/OOP.20222.Team04"]
+	path = OOP/OOP.20222.Team04
+	url = https://github.com/relatable52/OOP.20222.Team04
