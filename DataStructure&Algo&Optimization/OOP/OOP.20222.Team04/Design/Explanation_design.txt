@@ -1,0 +1,18 @@
+1. Describe the relationships between classes: 
+
+- BigGem and Stone: inheritance
+- SmallGem and Stone: inheritance
+
+- BoardCell and Stone: composition.
+(The BoardCell class has an ArrayList called stonesInCell, which contains Stone objects.
+ Without the Stone class, the BoardCell class cannot function). 
+- Board and BoardCell: composition.
+- Game and Board: composition.
+- Player and Stone: composition.
+
+- Game and Player: composition.
+
+- Board and Player: association.
+- BoardCell and Player: association. 
+
+2. Implementation of some important methods: 
