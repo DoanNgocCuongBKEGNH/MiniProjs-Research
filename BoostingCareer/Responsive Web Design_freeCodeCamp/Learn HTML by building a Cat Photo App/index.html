@@ -45,9 +45,16 @@
         <section>
             <h2>Cat From </h2>
             <form action="https://freecatphotoapp.com/submit-cat-photo">
+            <!--form: collect infor and send it to a processing server(action) -->
+                <input type="radio" name="animal" > Indoor
+                <input type="text" name="catphotourl" placeholder="cat photo URL" required> Cat
                 <!--create an input field named "catphotourl".-->
                 <!--Placeholder: hint about what kind of infor to enter into an input. -->
-                <input type="text" name="catphotourl" placeholder="cat photo URL" required> 
+                <!--'required' to input -->
+
+                <button type="submit">Submit</button>
+                <!--`button` element below the `input` element: default submits to `action`-->
+                <!--`type` attribute with the value `submit` make it clear: submit button.-->
             </form>
         </section>
     </main>
