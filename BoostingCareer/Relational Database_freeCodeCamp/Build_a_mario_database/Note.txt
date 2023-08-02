@@ -1,0 +1,52 @@
+- New Terminal: echo hello PostgreSQL
+-> psql --username=freecodecamp --dbname=postgres
+    postgres=> \l  (list database)
+-> CREATE DATABASE first_database;
+-> CREATE DATABASE second_database;
+postgres=> \c second_database
+You are now connected to database "second_database" as user "freecodecamp".
+second_database=> \d (list table)
+-> CREATE TABLE second_table();
+-> \d second_table
+
+-> ALTER TABLE second_table ADD COLUMN id INT;
+-> ALTER TABLE second_table ADD COLUMN name VARCHAR(30);
+-> ALTER TABLE second_table ADD COLUMN age INT; 
+-> ALTER TABLE second_table DROP COLUMN age; 
+
+second_database=> ALTER TABLE second_table RENAME COLUMN name to username;
+INSERT INTO second_table(id, username) VALUES(1, 'Samus');
+INSERT INTO second_table(id, username) VALUES(2, 'Mario');
+INSERT INTO second_table(id, username) VALUES(3, 'Luigi');
+DELETE FROM second_table WHERE username='Luigi';
+SELECT * FROM second_table;
+
+DROP TABLE second_table;
+DROP DATABASE first_database;
+ALTER DATABASE second_database RENAME TO mario_database;
+\l 
+\c mario_database
+CREATE TABLE characters();
+
+mario_database=> ALTER TABLE characters ADD COLUMN id  SERIAL; --  SERIAL = INT NOT NULL
+mario_database=> ALTER TABLE characters ADD COLUMN name VARCHAR(30);
+mario_database=> ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);
+mario_database=> ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(30);
+
+mario_database=> INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');
+mario_database=> INSERT INTO characters(name, homeland, favorite_color) 
+VALUES ('Toadstool', 'Mushroom Kingdom', 'Red'),
+('Bower', 'Mushroom Kingdom', 'Green'),
+('Daisy', 'Sarasaland', 'Yellow'),
+('Yoshi', 'Dinosaur Land', 'Green');
+
+mario_database=> UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';
+mario_database=> UPDATE characters SET name='Toad' WHERE favorite_color='Red';
+
+mario_database=> SELECT * FROM characters ORDER BY character_id;
+mario_database=> ALTER TABLE characters ADD PRIMARY KEY(name);
+mario_database=> \d characters
+
+Indexes:
+    "characters_pkey" PRIMARY KEY, btree (name)
+mario_database=> ALTER TABLE characters DROP CONSTRAINT characters_pkey;
