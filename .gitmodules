@@ -1,7 +1,4 @@
-[submodule "MachineLearning/ML20222.PredictionBitcoin"]
-	path = MachineLearning/ML20222.PredictionBitcoin
-	url = https://github.com/lavibula/ML20222.PredictionBitcoin
-	branch = main
 [submodule "BoostingCareer/OOP_App/OOP.20222.Team04"]
 	path = BoostingCareer/OOP_App/OOP.20222.Team04
 	url = https://github.com/relatable52/OOP.20222.Team04/
+
